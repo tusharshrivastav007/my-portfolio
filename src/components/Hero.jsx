@@ -2,22 +2,10 @@ import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import profilePhoto from '../assets/about/navin_photo.jpg';
-import heroVideo from '../assets/hero video/Developer_introduces_self_and_sk…_202606051918.mp4';
-
 const Hero = () => {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: 'ease-out' });
   }, []);
-
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) { videoRef.current.play(); setIsPlaying(true); }
-      else { videoRef.current.pause(); setIsPlaying(false); }
-    }
-  };
 
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#07070a] flex items-center">
@@ -70,7 +58,7 @@ const Hero = () => {
               className="px-7 py-3 rounded-full bg-white text-black text-sm font-black hover:bg-neutral-100 transition-all duration-300 shadow-lg hover:scale-105">
               View Projects
             </a>
-            <a href="/resume.pdf" download="Tushar_Shrivastav_Resume.pdf"
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
               className="px-7 py-3 rounded-full bg-red-600 text-white text-sm font-black hover:bg-red-700 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-red-900/30 hover:scale-105">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3" />
@@ -78,7 +66,7 @@ const Hero = () => {
               Resume
             </a>
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/tusharshrivastav007" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/tushar-shrivastav007" target="_blank" rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="group relative p-3 rounded-full bg-neutral-900 border border-neutral-700 text-neutral-300 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 hover:bg-neutral-800 transition-all duration-300 hover:scale-110">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -86,14 +74,14 @@ const Hero = () => {
               </svg>
               <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-neutral-900 border border-neutral-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">LinkedIn</span>
             </a>
-            {/* GitLab */}
-            <a href="https://gitlab.com/tusharshrivastav" target="_blank" rel="noopener noreferrer"
-              aria-label="GitLab"
-              className="group relative p-3 rounded-full bg-neutral-900 border border-neutral-700 text-neutral-300 hover:text-[#FC6D26] hover:border-[#FC6D26]/50 hover:bg-neutral-800 transition-all duration-300 hover:scale-110">
+            {/* GitHub */}
+            <a href="https://github.com/tusharshrivastav007" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="group relative p-3 rounded-full bg-neutral-900 border border-neutral-700 text-neutral-300 hover:text-white hover:border-white/50 hover:bg-neutral-800 transition-all duration-300 hover:scale-110">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 014.82 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0118.6 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.51L23 13.45a.84.84 0 01-.35.94z"/>
+                <path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" clipRule="evenodd" />
               </svg>
-              <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-neutral-900 border border-neutral-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">GitLab</span>
+              <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-neutral-900 border border-neutral-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">GitHub</span>
             </a>
           </div>
 
@@ -122,20 +110,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-
-            {/* Play reel */}
-            <button onClick={toggleVideo}
-              className="absolute -bottom-5 -right-4 flex items-center gap-3 bg-[#0e0e12]/90 backdrop-blur-md border border-neutral-800 rounded-xl px-5 py-3 text-sm font-bold text-white hover:border-red-500/50 hover:bg-[#12121a] transition-all duration-300 group shadow-xl">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${isPlaying ? 'bg-red-600' : 'bg-neutral-800 group-hover:bg-red-600'}`}>
-                {isPlaying
-                  ? <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
-                  : <svg className="w-3 h-3 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>}
-              </div>
-              {isPlaying ? 'Pause' : 'Play Intro'}
-            </button>
-            <video ref={videoRef} loop playsInline className="hidden">
-              <source src={heroVideo} type="video/mp4" />
-            </video>
           </div>
         </div>
       </div>

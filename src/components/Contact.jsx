@@ -24,7 +24,7 @@ const Contact = () => {
       />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-red-600/5 rounded-full blur-[100px] pointer-events-none z-0" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto relative z-10">
         {/* Title */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-4">
@@ -35,7 +35,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Direct contact cards */}
           <a
             href="mailto:tusharshrivastav007@gmail.com"
@@ -71,61 +71,6 @@ const Contact = () => {
           </a>
         </div>
 
-        {/* Contact form */}
-        <div data-aos="fade-up" data-aos-delay="150" className="bg-[#0e0e12] border border-neutral-800 rounded-3xl p-8 md:p-12">
-          <p className="text-xs font-mono text-neutral-500 uppercase tracking-[0.2em] mb-8">// Send a Message</p>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-full bg-transparent border-b border-neutral-700 pb-3 text-white text-base focus:outline-none focus:border-red-500 transition-colors placeholder-neutral-600 font-medium"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full bg-transparent border-b border-neutral-700 pb-3 text-white text-base focus:outline-none focus:border-red-500 transition-colors placeholder-neutral-600 font-medium"
-                />
-              </div>
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full bg-transparent border-b border-neutral-700 pb-3 text-white text-base focus:outline-none focus:border-red-500 transition-colors placeholder-neutral-600 font-medium"
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Your message..."
-                rows="4"
-                className="w-full bg-transparent border-b border-neutral-700 pb-3 text-white text-base focus:outline-none focus:border-red-500 transition-colors placeholder-neutral-600 font-medium resize-none"
-              />
-            </div>
-            <div className="flex flex-col items-end gap-3">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="px-8 py-3 rounded-full bg-red-600 text-white font-bold text-sm flex items-center gap-3 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-                {!isSubmitting && (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                )}
-              </button>
-              {submitSuccess && (
-                <p className="text-emerald-400 font-mono text-xs animate-pulse">
-                  ✓ Message sent successfully!
-                </p>
-              )}
-            </div>
-          </form>
-        </div>
       </div>
     </section>
   );

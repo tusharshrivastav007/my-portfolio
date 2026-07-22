@@ -16,26 +16,26 @@ const About = () => {
           {/* Content */}
           <div data-aos="fade-up" data-aos-delay="150" className="flex-1">
             <p className="text-base md:text-lg text-neutral-300 leading-relaxed mb-8 max-w-2xl">
-              Platform, DevOps, and Cloud Engineer with <strong className="text-white">3+ years of hands-on experience</strong> at Hidden Brains Infotech Pvt. Ltd., Ahmedabad. 
-              I specialize in designing <strong className="text-white">high-availability AWS cloud systems</strong>, implementing Infrastructure as Code (IaC), 
+              Platform, DevOps, and Cloud Engineer with <strong className="text-white">3+ years of hands-on experience</strong> at Hidden Brains Infotech Pvt. Ltd., Ahmedabad.
+              I specialize in designing <strong className="text-white">high-availability AWS cloud systems</strong>, implementing Infrastructure as Code (IaC),
               setting up GitOps pipelines with ArgoCD & Helm, and architecting robust Kubernetes-based platforms on EKS.
             </p>
 
             {/* Detail grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 mb-10">
               {[
-                { label: 'Name',      value: 'Tushar Shrivastav' },
-                { label: 'Role',      value: 'Platform / DevOps / Cloud Engineer' },
-                { label: 'Company',   value: 'Hidden Brains Infotech Pvt. Ltd.' },
-                { label: 'Location',  value: 'Ahmedabad, India' },
-                { label: 'Email',     value: 'tusharshrivastav007@gmail.com' },
-                { label: 'Phone',     value: '+91 7879525484' },
-                { label: 'LinkedIn',  value: 'linkedin.com/in/tushar-shrivastav007', link: 'https://www.linkedin.com/in/tushar-shrivastav007' },
-                { label: 'GitHub',    value: 'github.com/tusharshrivastav007', link: 'https://github.com/tusharshrivastav007' },
+                { label: 'Name', value: 'Tushar Shrivastav' },
+                { label: 'Role', value: 'Platform / DevOps / Cloud Engineer' },
+                { label: 'Company', value: 'Hidden Brains Infotech Pvt. Ltd.' },
+                { label: 'Location', value: 'Ahmedabad, India' },
+                { label: 'Email', value: 'tusharshrivastav007@gmail.com' },
+                { label: 'Phone', value: '+91 7878525484' },
+                { label: 'LinkedIn', value: 'linkedin.com/in/tushar-shrivastav007', link: 'https://www.linkedin.com/in/tushar-shrivastav007' },
+                { label: 'GitHub', value: 'github.com/tusharshrivastav007', link: 'https://github.com/tusharshrivastav007' },
                 { label: 'Education', value: 'B.Tech IT — Parul University, Vadodara' },
-                { label: 'CGPA',      value: '7.8 (2019 – 2023)' },
-                { label: 'Cert',      value: 'AWS Certified Cloud Practitioner (CLF-C02)' },
-                { label: 'Status',    value: 'Open to Work' },
+                { label: 'CGPA', value: '7.8 (2019 – 2023)' },
+                { label: 'Cert', value: 'AWS Certified Cloud Practitioner (CLF-C02)' },
+                { label: 'Status', value: 'Open to Work' },
               ].map(item => (
                 <div key={item.label} className="flex gap-3 items-start border-b border-neutral-900 pb-3">
                   <span className="text-red-500 font-bold text-[11px] uppercase tracking-wider mt-0.5 w-20 flex-shrink-0">{item.label}</span>

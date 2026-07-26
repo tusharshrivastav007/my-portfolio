@@ -1,20 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      e.target.reset();
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="relative w-full py-28 px-6 md:px-12 bg-[#07070a] border-t border-neutral-900 overflow-hidden">
       {/* Dot grid bg */}

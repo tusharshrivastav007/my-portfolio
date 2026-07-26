@@ -43,8 +43,9 @@ jobs:
         run: npm run build
 
       - name: Run Security Audit
-        # This will fail the pipeline if there are high/critical vulnerabilities
-        run: npm audit --audit-level=high
+        # This will fail the pipeline if there are high/critical vulnerabilities in production dependencies
+        # We omit dev dependencies because build-tool vulnerabilities don't affect the deployed static site.
+        run: npm audit --audit-level=high --omit=dev
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4

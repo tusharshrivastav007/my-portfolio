@@ -29,7 +29,7 @@ const About = () => {
                 { label: 'Company', value: 'Hidden Brains Infotech Pvt. Ltd.' },
                 { label: 'Location', value: 'Ahmedabad, India' },
                 { label: 'Email', value: 'tusharshrivastav007@gmail.com' },
-                { label: 'Phone', value: '+91 7878525484' },
+                { label: 'Phone', value: '+91 7878523490' },
                 { label: 'LinkedIn', value: 'linkedin.com/in/tushar-shrivastav007', link: 'https://www.linkedin.com/in/tushar-shrivastav007' },
                 { label: 'GitHub', value: 'github.com/tusharshrivastav007', link: 'https://github.com/tusharshrivastav007' },
                 { label: 'Education', value: 'B.Tech IT — Parul University, Vadodara' },
